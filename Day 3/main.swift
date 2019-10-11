@@ -28,8 +28,12 @@ if let x = a
     print(c)
 }
 
-var f1 = faculty()
-f1.basicSalary = 10000
+//var f1 = faculty()
+//f1.basicSalary = 10000
 //f1.bonus = 50
-f1.calcSalary()
-f1.printData()
+//f1.calcSalary()
+//f1.printData()
+
+var s1 = Student(studentID: 1, studentName: "Ajeet", marks: ["m1":20, "m2":30])
+s1.calculateTotal()
+s1.printD()

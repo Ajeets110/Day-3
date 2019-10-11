@@ -20,8 +20,26 @@ class faculty {
         
     }
     
+    deinit {
+        print("Faculty deinit called")
+    }
+    
     func printData() {
         print(finSalary!)
     }
     
+ 
+    convenience init(facultyID: Int, facultyName: String){
+        self.init(basicSalary: 0, bonus1: 0)
+        self.facultyID = facultyID
+        self.firstName = facultyName
+        
 }
+    init(basicSalary: Int, bonus1: Int) {
+        self.basicSalary = basicSalary
+        self.bonus = bonus1
+    }
+}
+
+
+//, basicSalary: Int, bonus: Int
