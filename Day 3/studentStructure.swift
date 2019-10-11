@@ -44,7 +44,10 @@ struct Student {
         }
         
     func printD(){
+        
+        print(marks)
         print(studentName)
         print(total)
+        
     }
 }

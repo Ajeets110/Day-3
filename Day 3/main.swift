@@ -37,3 +37,7 @@ if let x = a
 var s1 = Student(studentID: 1, studentName: "Ajeet", marks: ["m1":20, "m2":30])
 s1.calculateTotal()
 s1.printD()
+
+var f1 = faculty(facultyID: 0, facultyName: "Skrillex")
+f1.calcSalary()
+f1.printDa()
