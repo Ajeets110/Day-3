@@ -11,7 +11,7 @@ import Foundation
 struct Student {
     var studentID: Int
     var studentName: String
-    var marks = [String: Float]
+    var marks = Array[Float]
     
 
 }
