@@ -38,6 +38,22 @@ var s1 = Student(studentID: 1, studentName: "Ajeet", marks: ["m1":20, "m2":30])
 s1.calculateTotal()
 s1.printD()
 
+
 var f1 = faculty(facultyID: 0, facultyName: "Skrillex")
 f1.calcSalary()
-f1.printDa()
+
+
+var f2 = faculty(facultyID: 1, facultyName: "Batman")
+f2.calcSalary()
+
+
+var faculties = Dictionary<Int, faculty> ()
+faculties.updateValue(f1, forKey: f1.facultyID)
+faculties.updateValue(f2, forKey: f2.facultyID)
+
+for f in faculties{
+    print("----------")
+    f.value.printDa()
+    print("==========")
+}
+
