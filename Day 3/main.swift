@@ -40,11 +40,11 @@ s1.printD()
 
 
 var f1 = faculty(facultyID: 0, facultyName: "Skrillex")
-f1.calcSalary()
+f1.finSalary = 5
 
 
 var f2 = faculty(facultyID: 1, facultyName: "Batman")
-f2.calcSalary()
+
 
 
 var faculties = Dictionary<Int, faculty> ()
@@ -56,4 +56,4 @@ for f in faculties{
     f.value.printDa()
     print("==========")
 }
-
+// f2.finSalary = 1000

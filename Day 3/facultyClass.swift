@@ -8,17 +8,28 @@
 
 import Foundation
 class faculty {
-    var facultyID: Int!
+    var facultyID: Int?
     var firstName: String?
     var basicSalary: Int?
     var bonus: Int? = nil
-    var finSalary: Int?
-    
-    func calcSalary() {
+    var comm: Int = 0
+    var finSalary: Int{
         
-        finSalary = basicSalary! + (bonus ?? 0)
+        get{
+            return basicSalary! + (basicSalary! + self.bonus! * comm/100)
+        }
+        set(ncomm){
+            comm = ncomm
+        }
+        
         
     }
+    
+   // func calcSalary() {
+        
+   //      finSalary = basicSalary! + (bonus ?? 0)
+        
+   // }
     
     deinit {
         print("Faculty deinit called")
@@ -26,20 +37,20 @@ class faculty {
     
  
     convenience init(facultyID: Int, facultyName: String){
-        self.init(basicSalary: 25000, bonus1: 20)
-        self.facultyID = facultyID
-        self.firstName = facultyName
+       self.init(basicSalary: 25000, bonus1: 20)
+       self.facultyID = facultyID
+       self.firstName = facultyName
         
 }
     init(basicSalary: Int, bonus1: Int) {
-        self.basicSalary = basicSalary
-        self.bonus = bonus1
+       self.basicSalary = basicSalary
+       self.bonus = bonus1
     }
 
 
     func printDa(){
         print(firstName!)
-        print(finSalary!)
+        print(finSalary)
 }
 }
 //, basicSalary: Int, bonus: Int
